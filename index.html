@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Search</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="links">
+            <a href="images.html">Image Search</a>
+            <a href="advanced.html">Advanced Search</a>
+        </div>
+    </header>
+    <main>
+        <img src="https://img.teknolojioku.com/rcman/Cw620h350q95gc/storage/old/data/gallery/620x465/google-logosunun-hikayesi4.jpg" alt="Google Logo" class="logo">
+        <form action="https://www.google.com/search" method="GET">
+            <input type="text" id="searchQuery" name="q" placeholder="Search Google" class="search-bar" style="padding-left: 25px;">
+            <div class="buttons">
+                <input type="submit" value="Google Search">
+                <button type="button" class="feeling-lucky" onclick="feelingLucky()">I'm Feeling Lucky</button>
+            </div>
+        </form>
+    </main>
+
+    <script>
+        function feelingLucky() {
+            const query = document.getElementById('searchQuery').value;
+            if (query) {
+                window.location.href = `https://www.google.com/search?btnI=1&q=${encodeURIComponent(query)}`;
+            }
+        }
+    </script>
+</body>
+</html>
